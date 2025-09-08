@@ -1,4 +1,7 @@
-A modern HTML project utilizing CSS for building responsive web applications with minimal setup.
+## GROUP4-COS104-Project
+
+Event Planner Web App is a website for a festival or conference. It has a countdown, schedule with filters, and registration form with validation, saving user details in localStorage.
+
 
 ## 🚀 Features
 
@@ -9,7 +12,7 @@ A modern HTML project utilizing CSS for building responsive web applications wit
 
 ```
 html_app/
-├── pages/              # Additional HTML pages
+├── public/             # JS, Plugins
 ├── index.html          # Main HTML entry point
 └── assets/             # Images, fonts, and other static assets
 
@@ -18,10 +21,3 @@ html_app/
 ## 🎨 Styling
 
 This project uses CSS for styling.
-
-## 🙏 Acknowledgments
-
-- Built with [Rocket.new](https://rocket.new)
-- Powered by HTML and CSS
-
-Built with ❤️ on Rocket.new
