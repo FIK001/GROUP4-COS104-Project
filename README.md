@@ -1,12 +1,15 @@
 ## GROUP4-COS104-Project
 
-Event Planner Web App is a website for a festival or conference. It has a countdown, schedule with filters, and registration form with validation, saving user details in localStorage.
+A website for a music festival.
 
 
 ## 🚀 Features
 
 - **HTML5** - Modern HTML structure with best practices
 - **CSS** – A stylesheet language used to style HTML elements for building and customizing web interfaces.
+- It has a Countdown Timer
+- Schedule with filters
+- Registration form with validation, saving user details in localStorage
 
 ## 📁 Project Structure
 
