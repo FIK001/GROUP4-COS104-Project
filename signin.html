@@ -3,19 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
     <title>
       Ruzz Music Festival 2026 | Africa's Hottest Music Festival | January 19-23
     </title>
     <meta
       name="description"
-      content="Join Africa's hottest music festival featuring 50+ artists from 10+ countries. Experience the ultimate music celebration January 19-23, 2026. Get Tickets now for Ruzz Festival."
+      content="Join Africa's hottest music festival featuring 50+ artists from 10+ countries. Experience the ultimate music celebration January 19-23, 2026. Tickets now for Ruzz Festival."
     />
     <meta
       name="keywords"
       content="music festival, Africa, Ruzz, artists, concerts, January 2026, music events, festival tickets"
     />
-
-    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta
       property="og:title"
@@ -25,12 +27,10 @@
       property="og:description"
       content="Join Africa's hottest music festival featuring 50+ artists from 10+ countries. Experience the ultimate music celebration January 19-23, 2026."
     />
-
     <link rel="stylesheet" href="./assets/css/style.css" />
     <link rel="stylesheet" href="./assets/css/signup.css" />
   </head>
   <body>
-    <!-- Loading Screen  -->
     <div class="loading-screen" id="loadingScreen">
       <h1 class="loading-counter">0</h1>
       <div class="loading-overlay">
@@ -47,14 +47,11 @@
       </div>
     </div>
     <main class="main-container">
-      <!-- Hero Section -->
       <section class="hero-section">
         <div class="hero-bg-overlay"></div>
         <video autoplay muted loop playsinline class="bg-video">
           <source src="./assets/video/bg-video.mp4" type="video/mp4" />
         </video>
-
-        <!-- Header Navigation -->
         <header class="header-nav">
           <span class="nav-link show-reel-link">Show reel</span>
           <img
@@ -65,89 +62,108 @@
           />
           <nav class="nav-menu desktop">
             <a href="./index.html" class="nav-link">Home</a>
-            <a href="./tickets.html" class="nav-link">Get Tickets</a>
-            <a href="./signup.html" class="nav-link">Schedule</a>
-            <a href="./artistes.html" class="nav-link">Artistes</a>
+            <a href="./tickets.html" class="nav-link">Tickets</a>
+            <a href="./schedule.html" class="nav-link">Schedule</a>
+            <a href="./index.html#artistes" class="nav-link">Artistes</a>
           </nav>
         </header>
-
-        <!-- Hero Content -->
-        <!-- <div class="hero-content">
-          <div class="hero-text">
-            <h1 class="hero-title">The Hottest Music Festival in Africa</h1>
-            <p class="hero-date">January 19-23, 2026</p>
-          </div>
-          <div class="get-tickets-container">
-            <img
-              draggable="false"
-              src="./assets/images/img_logo_1.svg"
-              class="get-tickets-logo"
-              alt="Ruzz Festival"
-            />
-            <video autoplay muted loop playsinline class="get-tickets-bg-video">
-              <source src="./assets/video/bg-video.mp4" type="video/mp4" />
-            </video>
-            <button class="get-tickets-btn" type="button">Register</button>
-          </div>
-        </div> -->
         <div class="content-section">
-      <div class="form-container">
-        <div class="form-content">
-          <div class="form-wrapper">
-            <h2 class="sign-up-title">Sign In</h2>
-            
-            <form class="form-fields">
-              <div class="form-inputs">
-                
-                
-                <div class="input-group">
-                  <label class="input-label" for="email">Email</label>
-                  <input type="email" id="email" class="form-input" placeholder="Enter your email" required />
+          <div class="form-container">
+            <div class="form-content">
+              <div class="form-wrapper">
+                <h2 class="sign-up-title">Sign In</h2>
+                <form id="signin-form" class="form-fields">
+                  <div class="form-inputs">
+                    <div class="input-group">
+                      <label class="input-label" for="email">Email</label>
+                      <input
+                        type="email"
+                        id="email"
+                        class="form-input"
+                        placeholder="Enter your email"
+                        required
+                      />
+                    </div>
+                    <div class="input-group">
+                      <label class="input-label" for="password">Password</label>
+                      <input
+                        type="password"
+                        id="password"
+                        class="form-input"
+                        placeholder="Enter your password"
+                        required
+                      />
+                      <img
+                        src="./assets/images/eye.svg"
+                        class="eye"
+                        alt="Show password"
+                        id="show-password"
+                        class="password-toggle"
+                      />
+                    </div>
+                    <span
+                      class="error-message"
+                      style="color: red; font-size: 0.8rem"
+                    ></span>
+                    <button type="submit" class="sign-in-button">
+                      Sign In
+                    </button>
+                  </div>
+                </form>
+                <div class="divider">
+                  <img
+                    src="./assets/images/img_frame_61.svg"
+                    alt="-----"
+                    class="divider-line"
+                  />
+                  <p>or</p>
+                  <img
+                    src="./assets/images/img_frame_61.svg"
+                    alt="-----"
+                    class="divider-line"
+                  />
                 </div>
-                
-                <div class="input-group">
-                  <label class="input-label" for="password">Password</label>
-                  <input type="password" id="password" class="form-input" placeholder="Enter your password" required />
+                <div class="social-buttons">
+                  <button class="social-button">
+                    <img
+                      src="./assets/images/img_icons8google_1.svg"
+                      alt="Google"
+                      class="social-icon"
+                    />
+                    Sign in with Google
+                  </button>
+                  <button class="social-button">
+                    <img
+                      src="./assets/images/img_icons8applelogo_1.svg"
+                      alt="Apple"
+                      class="social-icon"
+                    />
+                    Sign in with Apple
+                  </button>
                 </div>
-                
-              
+                <p class="sign-in-text">
+                  Don't have an account?
+                  <a href="./signup.html" class="sign-in-link">Sign Up</a>
+                </p>
               </div>
-            </form>
-            <div class="divider">
-            <img src="./assets/images/img_frame_61.svg" alt="-----" class="divider-line" />
-            <p>or</p>
-            <img src="./assets/images/img_frame_61.svg" alt="-----" class="divider-line" />
             </div>
-            <div class="social-buttons">
-              <button class="social-button">
-                <img src="./assets/images/img_icons8google_1.svg" alt="Google" class="social-icon" />
-                Sign in with Google
-              </button>
-              <button class="social-button">
-                <img src="./assets/images/img_icons8applelogo_1.svg" alt="Apple" class="social-icon" />
-                Sign in with Apple
-              </button>
+            <div class="image-section">
+              <video
+                autoplay
+                muted
+                loop
+                playsinline
+                class="image-section-bg-video"
+              >
+                <source src="./assets/video/bg-video.mp4" type="video/mp4" />
+              </video>
+              <a href="./signup.html" class="image-section-button"
+                >Sign up instead</a
+              >
             </div>
-            
-            <p class="sign-in-text">
-              Don't have an account? <a href="./signup.html" class="sign-in-link">Sign Up</a>
-            </p>
           </div>
         </div>
-        
-        <div class="image-section">
-            <video autoplay muted loop playsinline class="image-section-bg-video">
-              <source src="./assets/video/bg-video.mp4" type="video/mp4" />
-            </video>
-          <a href="./signup.html" class="sign-in-button">Sign up instead</a>
-        </div>
-      </div>
-    </d>
-
-      
       </section>
-
-       <!-- Bottom Navigation -->
       <footer class="bottom-nav">
         <div class="bottom-nav-content">
           <img
@@ -158,21 +174,24 @@
           />
           <nav class="bottom-nav-links">
             <a href="./index.html" class="bottom-nav-link">Home</a>
-            <a href="./tickets.html" class="bottom-nav-link">Get Tickets</a>
-            <a href="./signup.html" class="bottom-nav-link">Schedule</a>
+            <a href="./tickets.html" class="bottom-nav-link">Tickets</a>
+            <a href="./schedule.html" class="bottom-nav-link">Schedule</a>
             <a href="./artistes" class="bottom-nav-link">Artistes</a>
           </nav>
           <a href="#" class="show-reel-link">Show reel</a>
         </div>
       </footer>
     </main>
-    <!-- Gsap -->
     <script src="./public/js/plugins/gsap.min.js"></script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script> -->
-
-    <!-- ScrollTrigger plugin -->
     <script src="./public/js/plugins/ScrollTrigger.min.js"></script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script> -->
     <script src="./public/js/script.js"></script>
+    <script src="./public/js/auth.js"></script>
+    <script>
+      window.addEventListener("DOMContentLoaded", () => {
+        document
+          .querySelector("#signin-form")
+          .addEventListener("submit", auth.handleSignin);
+      });
+    </script>
   </body>
 </html>
