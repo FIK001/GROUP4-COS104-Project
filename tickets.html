@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tickets | Ruzz Music Festival</title>
+    <meta
+      name="description"
+      content="Get your tickets for the Ruzz Music Festival. View available tickets and manage your purchased tickets."
+    />
+    <meta
+      name="keywords"
+      content="music festival, Africa, Ruzz, tickets, buy tickets, festival passes"
+    />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Tickets | Ruzz Music Festival 2026" />
+    <meta
+      property="og:description"
+      content="Get your tickets for the Ruzz Music Festival. View available tickets and manage your purchased tickets."
+    />
+
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/signup.css" />
+    <link rel="stylesheet" href="./assets/css/tickets.css" />
+  </head>
+  <body>
+    <div class="loading-screen" id="loadingScreen">
+      <h1 class="loading-counter">0</h1>
+      <div class="loading-overlay">
+        <div class="loading-bar"></div>
+        <div class="loading-bar"></div>
+        <div class="loading-bar"></div>
+        <div class="loading-bar"></div>
+        <div class="loading-bar"></div>
+        <div class="loading-bar"></div>
+        <div class="loading-bar"></div>
+        <div class="loading-bar"></div>
+        <div class="loading-bar"></div>
+        <div class="loading-bar"></div>
+      </div>
+    </div>
+
+    <main class="main-container">
+      <section class="hero-section">
+        <div class="hero-bg-overlay"></div>
+        <video autoplay muted loop playsinline class="bg-video">
+          <source src="./assets/video/bg-video.mp4" type="video/mp4" />
+        </video>
+
+        <header class="header-nav">
+          <span class="nav-link show-reel-link">Show reel</span>
+          <img
+            draggable="false"
+            src="./assets/images/img_logo_1.svg"
+            alt="Ruzz Festival Logo"
+            class="logo"
+          />
+          <nav class="nav-menu desktop">
+            <a href="./index.html" class="nav-link">Home</a>
+            <a href="./tickets.html" class="nav-link">Tickets</a>
+            <a href="./schedule.html" class="nav-link">Schedule</a>
+            <a href="./index.html#artistes" class="nav-link">Artistes</a>
+            <a class="nav-link signout-button" id="logout-btn"> Log Out </a>
+          </nav>
+        </header>
+
+        <div class="tickets-container content-section">
+          <h1 class="tickets-title">Ruzz Festival Tickets</h1>
+          <h2 class="welcome-message" id="welcome-message"></h2>
+
+          <div class="tickets-grid" id="available-tickets">
+            <h3 class="section-title">Available Tickets</h3>
+          </div>
+          <hr class="section-divider" />
+          <div class="my-tickets-section" id="my-tickets">
+            <h3 class="section-title">My Tickets</h3>
+            <p id="no-tickets-message" class="no-tickets-message">
+              You have not purchased any tickets yet.
+            </p>
+            <div class="my-tickets-container" id="my-tickets-container"></div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="bottom-nav">
+        <div class="bottom-nav-content">
+          <img
+            draggable="false"
+            src="./assets/images/img_logo_1.svg"
+            alt="Ruzz Festival Logo"
+            class="bottom-logo"
+          />
+          <nav class="bottom-nav-links">
+            <a href="./index.html" class="bottom-nav-link">Home</a>
+            <a href="./tickets.html" class="bottom-nav-link">Tickets</a>
+            <a href="./schedule.html" class="bottom-nav-link">Schedule</a>
+            <a href="../index.html/#artistes" class="bottom-nav-link"
+              >Artistes</a
+            >
+          </nav>
+          <a href="#" class="show-reel-link">Show reel</a>
+        </div>
+      </footer>
+    </main>
+
+    <script src="./public/js/plugins/gsap.min.js"></script>
+    <script src="./public/js/plugins/ScrollTrigger.min.js"></script>
+    <script src="./public/js/script.js"></script>
+    <script type="module" src="./public/js/main.js"></script>
+    <!-- mark script as module -->
+    <script type="module">
+      import { loadTickets } from "./public/js/tickets.js";
+      import { Storage } from "./public/js/storage.js";
+
+      window.addEventListener("DOMContentLoaded", () => {
+        loadTickets();
+
+        const logoutBtn = document.getElementById("logout-btn");
+        if (logoutBtn) {
+          logoutBtn.addEventListener("click", () => {
+            Storage.clearSession();
+            window.location.href = "signin.html";
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
