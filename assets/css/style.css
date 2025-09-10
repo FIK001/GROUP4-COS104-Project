@@ -1284,7 +1284,7 @@ body {
 .mobile-nav {
   display: none;
   flex-direction: column;
-  background: none; 
+  background: black; 
   position: absolute;
   top: 60px;
   right: 0;
@@ -1354,4 +1354,5 @@ body {
     border-radius: 2px;
   }
 }
+
 
