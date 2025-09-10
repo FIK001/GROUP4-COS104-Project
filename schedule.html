@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Ruzz Music Festival 2026 | Africa's Hottest Music Festival | January 19-23
+    </title>
+    <meta
+      name="description"
+      content="Join Africa's hottest music festival featuring 50+ artists from 10+ countries. Experience the ultimate music celebration January 19-23, 2026. Tickets now for Ruzz Festival."
+    />
+    <meta
+      name="keywords"
+      content="music festival, Africa, Ruzz, artists, concerts, January 2026, music events, festival tickets"
+    />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Ruzz Music Festival 2026 | Africa's Hottest Music Festival"
+    />
+    <meta
+      property="og:description"
+      content="Join Africa's hottest music festival featuring 50+ artists from 10+ countries. Experience the ultimate music celebration January 19-23, 2026."
+    />
+
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/signup.css" />
+    <link rel="stylesheet" href="./assets/css/schedule.css" />
+  </head>
+  <body>
+    <!-- Loading Screen  -->
+    <div class="loading-screen" id="loadingScreen">
+      <h1 class="loading-counter">0</h1>
+      <div class="loading-overlay">
+        <div class="loading-bar"></div>
+        <div class="loading-bar"></div>
+        <div class="loading-bar"></div>
+        <div class="loading-bar"></div>
+        <div class="loading-bar"></div>
+        <div class="loading-bar"></div>
+        <div class="loading-bar"></div>
+        <div class="loading-bar"></div>
+        <div class="loading-bar"></div>
+        <div class="loading-bar"></div>
+      </div>
+    </div>
+    <main class="main-container">
+      <!-- Hero Section -->
+      <section class="hero-section">
+        <div class="hero-bg-overlay"></div>
+        <video autoplay muted loop playsinline class="bg-video">
+          <source src="./assets/video/bg-video.mp4" type="video/mp4" />
+        </video>
+
+        <!-- Header Navigation -->
+        <header class="header-nav">
+          <span class="nav-link show-reel-link">Show reel</span>
+          <img
+            draggable="false"
+            src="./assets/images/img_logo_1.svg"
+            alt="Ruzz Festival Logo"
+            class="logo"
+          />
+          <nav class="nav-menu desktop">
+            <a href="./index.html" class="nav-link">Home</a>
+            <a href="./tickets.html" class="nav-link">Tickets</a>
+            <a href="./schedule.html" class="nav-link">Schedule</a>
+            <a href="./index.html#artistes" class="nav-link">Artistes</a>
+          </nav>
+        </header>
+
+       
+        <div class="content-section">
+       <div class="container">
+   
+        <section class="page-title">
+            <h1>Event Schedule</h1>
+            <p>Plan your experience with our detailed schedule of performances, workshops, and special events.</p>
+        </section>
+        
+        <section class="filter-buttons">
+            <button class="filter-btn active" data-day="all">All Days</button>
+            <button class="filter-btn" data-day="friday">Friday</button>
+            <button class="filter-btn" data-day="saturday">Saturday</button>
+            <button class="filter-btn" data-day="sunday">Sunday</button>
+        </section>
+        
+        <section class="schedule-container">
+            <!-- Schedule content will be dynamically generated here -->
+        </section>
+        
+        
+    </div>
+    </d>
+
+      
+      </section>
+
+       <!-- Bottom Navigation -->
+      <footer class="bottom-nav">
+        <div class="bottom-nav-content">
+          <img
+            draggable="false"
+            src="./assets/images/img_logo_1.svg"
+            alt="Ruzz Festival Logo"
+            class="bottom-logo"
+          />
+          <nav class="bottom-nav-links">
+            <a href="./index.html" class="bottom-nav-link">Home</a>
+            <a href="./tickets.html" class="bottom-nav-link">Tickets</a>
+            <a href="./schedule.html" class="bottom-nav-link">Schedule</a>
+            <a href="./artistes" class="bottom-nav-link">Artistes</a>
+          </nav>
+          <a href="#" class="show-reel-link">Show reel</a>
+        </div>
+      </footer>
+    </main>
+    <!-- Gsap -->
+    <script src="./public/js/plugins/gsap.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script> -->
+
+    <!-- ScrollTrigger plugin -->
+    <script src="./public/js/plugins/ScrollTrigger.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script> -->
+    <script src="./public/js/script.js"></script>
+   <script src="./public/js/auth.js"></script>
+<script>
+        // Schedule data
+        const scheduleData = [
+            {
+                day: "friday",
+                date: "August 15, 2025",
+                events: [
+                    {
+                        time: "4:00 PM",
+                        title: "Opening Ceremony",
+                        description: "Kick off the festival with our spectacular opening ceremony featuring special guests and performances.",
+                        location: "Main Stage"
+                    },
+                    {
+                        time: "5:30 PM",
+                        title: "Indie Showcase",
+                        description: "Discover emerging talent from the indie music scene with performances by up-and-coming artists.",
+                        location: "Green Stage"
+                    },
+                    {
+                        time: "7:00 PM",
+                        title: "Electronic Dance Workshop",
+                        description: "Learn the latest dance moves from professional dancers in this interactive workshop.",
+                        location: "Dance Tent"
+                    },
+                    {
+                        time: "8:30 PM",
+                        title: "Headliner: The Lumineers",
+                        description: "Grammy-nominated folk rock band performing their greatest hits and new material.",
+                        location: "Main Stage"
+                    }
+                ]
+            },
+            {
+                day: "saturday",
+                date: "August 16, 2025",
+                events: [
+                    {
+                        time: "12:00 PM",
+                        title: "Songwriting Masterclass",
+                        description: "Award-winning songwriters share their process and techniques in this intimate session.",
+                        location: "Workshop Tent"
+                    },
+                    {
+                        time: "2:00 PM",
+                        title: "Jazz Ensemble",
+                        description: "Enjoy smooth jazz performances from some of the best musicians in the genre.",
+                        location: "Garden Stage"
+                    },
+                    {
+                        time: "4:30 PM",
+                        title: "DJ Battle Finals",
+                        description: "Watch the final round of our DJ competition with special guest judges.",
+                        location: "Dance Tent"
+                    },
+                    {
+                        time: "6:00 PM",
+                        title: "Alternative Rock Showcase",
+                        description: "High-energy performances from the hottest alternative rock bands of the year.",
+                        location: "Main Stage"
+                    },
+                    {
+                        time: "8:00 PM",
+                        title: "Rap & Hip-Hop Hour",
+                        description: "Featuring both established stars and rising talents in the hip-hop scene.",
+                        location: "Urban Stage"
+                    },
+                    {
+                        time: "10:00 PM",
+                        title: "Headliner: Billie Eilish",
+                        description: "Multiple Grammy-winning artist performing an exclusive festival set.",
+                        location: "Main Stage"
+                    }
+                ]
+            },
+            {
+                day: "sunday",
+                date: "August 17, 2025",
+                events: [
+                    {
+                        time: "11:00 AM",
+                        title: "Yoga & Sound Healing",
+                        description: "Start your day with a relaxing yoga session accompanied by live ambient music.",
+                        location: "Garden Stage"
+                    },
+                    {
+                        time: "1:00 PM",
+                        title: "Local Artists Showcase",
+                        description: "Support homegrown talent with performances by the best local musicians.",
+                        location: "Community Stage"
+                    },
+                    {
+                        time: "3:30 PM",
+                        title: "Music Production Workshop",
+                        description: "Learn production techniques from industry professionals using the latest software.",
+                        location: "Workshop Tent"
+                    },
+                    {
+                        time: "5:00 PM",
+                        title: "World Music Performances",
+                        description: "Experience diverse musical traditions from around the globe.",
+                        location: "World Stage"
+                    },
+                    {
+                        time: "7:30 PM",
+                        title: "Headliner: Coldplay",
+                        description: "Closing the festival with a spectacular show featuring fireworks and special effects.",
+                        location: "Main Stage"
+                    }
+                ]
+            }
+        ];
+
+        // Function to render schedule
+        function renderSchedule(dayFilter = 'all') {
+            const scheduleContainer = document.querySelector('.schedule-container');
+            scheduleContainer.innerHTML = '';
+            
+            scheduleData.forEach(day => {
+                if (dayFilter === 'all' || dayFilter === day.day) {
+                    const dayColumn = document.createElement('div');
+                    dayColumn.className = 'day-column';
+                    dayColumn.setAttribute('data-day', day.day);
+                    
+                    const dayHeader = document.createElement('div');
+                    dayHeader.className = 'day-header';
+                    
+                    const dayTitle = document.createElement('h2');
+                    dayTitle.className = 'day-title';
+                    dayTitle.textContent = day.day.charAt(0).toUpperCase() + day.day.slice(1);
+                    
+                    const dayDate = document.createElement('p');
+                    dayDate.className = 'day-date';
+                    dayDate.textContent = day.date;
+                    
+                    dayHeader.appendChild(dayTitle);
+                    dayHeader.appendChild(dayDate);
+                    dayColumn.appendChild(dayHeader);
+                    
+                    day.events.forEach(event => {
+                        const eventCard = document.createElement('div');
+                        eventCard.className = 'event-card';
+                        
+                        const eventTime = document.createElement('p');
+                        eventTime.className = 'event-time';
+                        eventTime.innerHTML = `<i class="far fa-clock"></i> ${event.time}`;
+                        
+                        const eventTitle = document.createElement('h3');
+                        eventTitle.className = 'event-title';
+                        eventTitle.textContent = event.title;
+                        
+                        const eventDescription = document.createElement('p');
+                        eventDescription.className = 'event-description';
+                        eventDescription.textContent = event.description;
+                        
+                        const eventLocation = document.createElement('p');
+                        eventLocation.className = 'event-location';
+                        eventLocation.innerHTML = `<i class="fas fa-map-marker-alt"></i> ${event.location}`;
+                        
+                        eventCard.appendChild(eventTime);
+                        eventCard.appendChild(eventTitle);
+                        eventCard.appendChild(eventDescription);
+                        eventCard.appendChild(eventLocation);
+                        
+                        dayColumn.appendChild(eventCard);
+                    });
+                    
+                    scheduleContainer.appendChild(dayColumn);
+                }
+            });
+        }
+
+        // Initial render
+        renderSchedule();
+
+        // Filter functionality
+        document.querySelectorAll('.filter-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                document.querySelectorAll('.filter-btn').forEach(btn => {
+                    btn.classList.remove('active');
+                });
+                
+                this.classList.add('active');
+                
+                const dayFilter = this.getAttribute('data-day');
+                renderSchedule(dayFilter);
+            });
+        });
+    </script>
+
+  </body>
+</html>
