@@ -2,7 +2,7 @@
 
 A website for a music festival.
 
-## [https://fik001.github.io/GROUP4-COS104-Project/](https://fik001.github.io/GROUP4-COS104-Project/)
+## [https://ruzzfest.netlify.app/](https://ruzzfest.netlify.app/)
 
 
 ## 🚀 Features
