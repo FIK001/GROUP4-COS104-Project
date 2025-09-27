@@ -20,6 +20,10 @@
       content="Get your tickets for the Ruzz Music Festival. View available tickets and manage your purchased tickets."
     />
 
+    <!-- Lenis Smooth Scroll -->
+    <script src="./public/js/plugins/lenis.min.js"></script>
+
+    <!-- CSS -->
     <link rel="stylesheet" href="./assets/css/style.css" />
     <link rel="stylesheet" href="./assets/css/signup.css" />
     <link rel="stylesheet" href="./assets/css/tickets.css" />
@@ -42,6 +46,54 @@
     </div>
 
     <main class="main-container">
+      <div class="mobile-nav">
+        <ul>
+          <li><a class="nav-link" href="./index.html">Home</a></li>
+          <li><a class="nav-link" href="./tickets.html">Tickets</a></li>
+          <li><a class="nav-link" href="./schedule.html">Schedule</a></li>
+          <li><a class="nav-link" href="./index.html#artistes">Artistes</a></li>
+          <li>
+            <a class="nav-link" href="./index.html#show-reel">Show reel</a>
+          </li>
+          <li>
+            <a href="#" class="ptest"></a>
+            <a href="#" class="nav-link signout-button logout-btn">
+              Log Out
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <header class="header-nav appearing-header">
+        <a href="./index.html#show-reel" class="nav-link show-reel-link"
+          >Show reel</a
+        >
+        <img
+          draggable="false"
+          src="./assets/images/img_logo_1.svg"
+          alt="Ruzz Festival Logo"
+          class="logo"
+        />
+        <nav class="nav-menu appearing-nav desktop">
+          <a href="./index.html" class="nav-link">Home</a>
+          <a href="./tickets.html" class="nav-link">Tickets</a>
+          <a href="./schedule.html" class="nav-link">Schedule</a>
+          <a href="./index.html#artistes" class="nav-link">Artistes</a>
+          <a href="#" class="nav-link signout-button logout-btn">
+            Log Out
+          </a>
+        </nav>
+        <div class="hamburger">
+          <input
+            type="checkbox"
+            name="hamburger"
+            id="hamburger-checkbox"
+            class="hamburger-checkbox"
+          />
+          <span class="hamburger-line hamburger-line-1"></span>
+          <span class="hamburger-line hamburger-line-2"></span>
+        </div>
+      </header>
       <section class="hero-section">
         <div class="hero-bg-overlay"></div>
         <video autoplay muted loop playsinline class="bg-video">
@@ -49,7 +101,9 @@
         </video>
 
         <header class="header-nav">
-          <span class="nav-link show-reel-link">Show reel</span>
+          <a href="./index.html#show-reel" class="nav-link show-reel-link"
+            >Show reel</a
+          >
           <img
             draggable="false"
             src="./assets/images/img_logo_1.svg"
@@ -61,17 +115,29 @@
             <a href="./tickets.html" class="nav-link">Tickets</a>
             <a href="./schedule.html" class="nav-link">Schedule</a>
             <a href="./index.html#artistes" class="nav-link">Artistes</a>
-            <a class="nav-link signout-button" id="logout-btn"> Log Out </a>
+            <a href="#" class="nav-link signout-button logout-btn">
+              Log Out
+            </a>
           </nav>
+          <div class="hamburger">
+            <input
+              type="checkbox"
+              name="hamburger"
+              id="hamburger-checkbox"
+              class="hamburger-checkbox"
+            />
+            <span class="hamburger-line hamburger-line-1"></span>
+            <span class="hamburger-line hamburger-line-2"></span>
+          </div>
         </header>
 
         <div class="tickets-container content-section">
           <h1 class="tickets-title">Ruzz Festival Tickets</h1>
           <h2 class="welcome-message" id="welcome-message"></h2>
 
-          <div class="tickets-grid" id="available-tickets">
-            <h3 class="section-title">Available Tickets</h3>
-          </div>
+          <h3 class="section-title">Available Tickets</h3>
+          <div class="tickets-grid" id="available-tickets"></div>
+
           <hr class="section-divider" />
           <div class="my-tickets-section" id="my-tickets">
             <h3 class="section-title">My Tickets</h3>
@@ -95,11 +161,11 @@
             <a href="./index.html" class="bottom-nav-link">Home</a>
             <a href="./tickets.html" class="bottom-nav-link">Tickets</a>
             <a href="./schedule.html" class="bottom-nav-link">Schedule</a>
-            <a href="../index.html/#artistes" class="bottom-nav-link"
+            <a href="../index.html#artistes" class="bottom-nav-link"
               >Artistes</a
             >
           </nav>
-          <a href="#" class="show-reel-link">Show reel</a>
+          <a href="./index.html#show-reel" class="show-reel-link">Show reel</a>
         </div>
       </footer>
     </main>
@@ -115,14 +181,14 @@
 
       window.addEventListener("DOMContentLoaded", () => {
         loadTickets();
+      });
 
-        const logoutBtn = document.getElementById("logout-btn");
-        if (logoutBtn) {
-          logoutBtn.addEventListener("click", () => {
-            Storage.clearSession();
-            window.location.href = "signin.html";
-          });
-        }
+      const logoutButtons = document.querySelectorAll(".logout-btn");
+      logoutButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          Storage.clearSession();
+          window.location.href = "signin.html";
+        });
       });
     </script>
   </body>

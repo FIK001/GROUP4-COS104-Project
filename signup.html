@@ -23,6 +23,10 @@
       property="og:description"
       content="Join Africa's hottest music festival featuring 50+ artists from 10+ countries. Experience the ultimate music celebration January 19-23, 2026."
     />
+    <!-- Lenis Smooth Scroll -->
+    <script src="./public/js/plugins/lenis.min.js"></script>
+
+    <!-- CSS -->
     <link rel="stylesheet" href="./assets/css/style.css" />
     <link rel="stylesheet" href="./assets/css/signup.css" />
   </head>
@@ -43,13 +47,54 @@
       </div>
     </div>
     <main class="main-container">
+      <div class="mobile-nav">
+        <ul>
+          <li><a class="nav-link" href="./index.html">Home</a></li>
+          <li><a class="nav-link" href="./tickets.html">Tickets</a></li>
+          <li><a class="nav-link" href="./schedule.html">Schedule</a></li>
+          <li><a class="nav-link" href="./index.html#artistes">Artistes</a></li>
+          <li>
+            <a class="nav-link" href="./index.html#show-reel">Show reel</a>
+          </li>
+        </ul>
+      </div>
+
+      <header class="header-nav appearing-header">
+        <a href="./index.html#show-reel" class="nav-link show-reel-link"
+          >Show reel</a
+        >
+        <img
+          draggable="false"
+          src="./assets/images/img_logo_1.svg"
+          alt="Ruzz Festival Logo"
+          class="logo"
+        />
+        <nav class="nav-menu appearing-nav desktop">
+          <a href="./index.html" class="nav-link">Home</a>
+          <a href="./tickets.html" class="nav-link">Tickets</a>
+          <a href="./schedule.html" class="nav-link">Schedule</a>
+          <a href="./index.html#artistes" class="nav-link">Artistes</a>
+        </nav>
+        <div class="hamburger">
+          <input
+            type="checkbox"
+            name="hamburger"
+            id="hamburger-checkbox"
+            class="hamburger-checkbox"
+          />
+          <span class="hamburger-line hamburger-line-1"></span>
+          <span class="hamburger-line hamburger-line-2"></span>
+        </div>
+      </header>
       <section class="hero-section">
         <div class="hero-bg-overlay"></div>
         <video autoplay muted loop playsinline class="bg-video">
           <source src="./assets/video/bg-video.mp4" type="video/mp4" />
         </video>
         <header class="header-nav">
-          <span class="nav-link show-reel-link">Show reel</span>
+          <a href="./index.html#show-reel" class="nav-link show-reel-link"
+            >Show reel</a
+          >
           <img
             draggable="false"
             src="./assets/images/img_logo_1.svg"
@@ -62,6 +107,16 @@
             <a href="./schedule.html" class="nav-link">Schedule</a>
             <a href="./index.html#artistes" class="nav-link">Artistes</a>
           </nav>
+          <div class="hamburger">
+            <input
+              type="checkbox"
+              name="hamburger"
+              id="hamburger-checkbox"
+              class="hamburger-checkbox"
+            />
+            <span class="hamburger-line hamburger-line-1"></span>
+            <span class="hamburger-line hamburger-line-2"></span>
+          </div>
         </header>
         <div class="content-section">
           <div class="form-container">
@@ -77,6 +132,7 @@
                         id="name"
                         class="form-input"
                         placeholder="Enter your name"
+                        autocomplete="off"
                         required
                       />
                     </div>
@@ -87,8 +143,22 @@
                         id="email"
                         class="form-input"
                         placeholder="Enter your email"
+                        autocomplete="off"
                         required
                       />
+                    </div>
+                    <div class="input-group">
+                      <label class="input-label" for="ticket">Ticket</label>
+                      <select
+                        name="ticket"
+                        id="ticket"
+                        required
+                        class="form-input"
+                      >
+                        <option value="basic-pass">Basic Pass</option>
+                        <option value="vip-pass">VIP Pass</option>
+                        <option value="platinum-pass">Platinum Pass</option>
+                      </select>
                     </div>
                     <div class="input-group">
                       <label class="input-label" for="password">Password</label>
@@ -97,6 +167,7 @@
                         id="password"
                         class="form-input"
                         placeholder="Enter your password"
+                        autocomplete="new-password"
                         required
                       />
                       <img
@@ -117,6 +188,7 @@
                         id="confirm-password"
                         class="form-input"
                         placeholder="Confirm your password"
+                        autocomplete="new-password"
                         required
                       />
                       <img
@@ -217,18 +289,18 @@
             <a href="./index.html" class="bottom-nav-link">Home</a>
             <a href="./tickets.html" class="bottom-nav-link">Tickets</a>
             <a href="./schedule.html" class="bottom-nav-link">Schedule</a>
-            <a href="../index.html/#artistes" class="bottom-nav-link"
+            <a href="../index.html#artistes" class="bottom-nav-link"
               >Artistes</a
             >
           </nav>
-          <a href="#" class="show-reel-link">Show reel</a>
+          <a href="./index.html#show-reel" class="show-reel-link">Show reel</a>
         </div>
       </footer>
     </main>
     <script src="./public/js/plugins/gsap.min.js"></script>
     <script src="./public/js/plugins/ScrollTrigger.min.js"></script>
     <script type="module" src="./public/js/main.js"></script>
-    
+
     <script src="./public/js/script.js"></script>
     <script src="./public/js/auth.js"></script>
     <script>
